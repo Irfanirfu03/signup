@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up</title>
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function (event) {
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+
+    // Validate email format (you can use a more robust regex)
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!emailRegex.test(emailInput.value)) {
+        alert('Please enter a valid email address.');
+        event.preventDefault();
+    }
+
+    // Validate password length (you can add more criteria)
+    if (passwordInput.value.length < 6) {
+        alert('Password must be at least 6 characters long.');
+        event.preventDefault();
+    }
+});
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1><center>Sign Up</h1></center>
+        <form id="signup-form">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="email">Mobile number or Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="date" name="Date of birth" value="date">
+                <!-- Add options for date of birth -->
+            
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male">
+            male
+            <input type="radio" name="gender" value="female">
+            female
+            <!-- Add more gender options if needed -->
+
+            <button type="submit"><center>Sign Up</center></button>
+        </form>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style>
+        /* Basic styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #038855;
+        }
+    </style>
+</head>
